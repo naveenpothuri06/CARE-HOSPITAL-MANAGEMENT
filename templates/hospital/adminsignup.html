@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+
+  {% include "hospital/navbar.html" %}
+  <br>
+  <br>
+  <br>
+  <br>
+
+<center>
+
+<body bgcolor="#fafad2">
+
+  <!--- signup page for admin by admin(sumit)  ---------->
+  <form method="post">
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note">
+          <p>Add New Admin To Hospital</p>
+        </div>
+
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                firstname  :<input type="text" name="firstname" placeholder="firstname" maxlength='220'><br>
+              </div>
+              <div class="form-group">
+               user name:<input type="text" name="username" placeholder="username" maxlength='22'><br>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                lastname:<input type="text" name="lastname" placeholder="lastname" maxlength='100'><br>
+            </div>
+              <div class="form-group">
+                password :<input type="password" name="password" placeholder="password" maxlength='22'><br>
+                </div>
+
+            </div>
+          </div>
+          <button type="submit" class="btnSubmit">Submit</button>
+          <div class="text-center">Already have an account? <a href="adminlogin">Login here</a></div>
+        </div>
+      </div>
+    </div>
+  </form>
+</body>
+</center>
+</html>

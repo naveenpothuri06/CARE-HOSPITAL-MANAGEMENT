@@ -1,0 +1,77 @@
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+{%load static%}
+
+
+
+<html>
+<head>
+<style>
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<center>
+    <div class="panel-heading">
+      <h1 class="panel-title">VIEW DOCTOR RECORD</h1>
+    </div>
+
+<table>      <thead>
+        <tr>
+
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Address</th>
+          <th>Department</th>
+          <th>Update</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      {% for d in doctors %}
+      <tr>
+
+        <td> {{d.get_name}}</td>
+        <td>{{d.mobile}}</td>
+        <td>{{d.address}}</td>
+        <td>{{d.department}}</td>
+
+        <td>   <a  href="{% url 'update-doctor' d.id  %}" input type="button"  role="button" class="button" value="Input Button">UPDATE</a>
+       </td>
+        <td>  <a  href="{% url 'delete-doctor-from-hospital' d.id  %}" input type="button"  role="button" class="button" value="Input Button">DELETE</a></td>
+      </tr>
+      {% endfor %}
+
+    </table>
+
+</center>
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body><center>
+{% endblock content %}

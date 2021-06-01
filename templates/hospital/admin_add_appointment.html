@@ -1,0 +1,26 @@
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+<center>
+<br><br>
+<!------ add appointment page by admin(sumit)  ---------->
+<form method="post">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+          <h1><p>Book Appointment Details</p></h1>
+      </div>
+        {{ appointmentForm.as_p }}
+        <button type="submit" class="btnSubmit">Book</button>
+      </div>
+    </div>
+  </div>
+</form>
+</center>
+<!--
+developed By : sumit kumar
+facebook : fb.com/sumit.luv
+youtube : youtube.com/lazycoders
+-->
+
+{% endblock content %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<center>
+<body>
+  {% include "hospital/navbar.html" %}
+  <br>
+  <br>
+  <br><br>
+  <form method="post" >
+    {% csrf_token %}
+    <div class="container register-form">
+      <div class="form">
+        <div class="note"><h1>
+            <p>DOCTOR Login Page</p></h1>
+        </div>
+
+        <div class="form-content">
+          <div class="row">
+            <div class="col-md-6">
+
+              <div class="form-group">
+
+               user name:<input type="text" name="username" placeholder="username" maxlength='22'><br>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+
+              <div class="form-group">
+              password :<input type="password" name="password" placeholder="password" maxlength='22'><br>
+                </div>
+
+            </div>
+          </div>
+          <button type="submit" class="btnSubmit">Login</button>
+          <div class="text-center">Do not have account? <a href="doctorsignup">Signup here</a></div>
+        </div>
+      </div>
+    </div>
+
+  </form>
+</body>
+</center>
+  <br><br><br>
+
+</html>

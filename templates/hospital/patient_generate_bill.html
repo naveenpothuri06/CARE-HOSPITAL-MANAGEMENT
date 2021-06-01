@@ -1,0 +1,305 @@
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+{%load static%}
+
+
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<center>
+    <div class="panel-heading">
+      <h1 class="panel-title">GENERATE BILL</h1>
+    </div>
+
+<table><thead>
+        <tr>
+          <th>Admit Date</th>
+
+          <th> Release Date</th>
+          <th>Days Spent</th>
+          <th>Patient Name </th>
+          <th>Patient Mobile</th>
+             <th> Patient Address</th>
+          <th>Doctor Name</th>
+          <th>Deases symptoms </th>
+                 </tr>
+      </thead>
+
+      <tr>
+        <td>{{admitDate}}</td>
+        <td>{{todayDate}}</td>
+        <td>{{day}}</td>
+        <td>{{name}}</td>
+        <td>{{mobile}}</td>
+
+          <td>{{address}}</td>
+        <td>{{assignedDoctorName}}</td>
+        <td>{{symptoms}}</td>
+
+      </tr>
+
+
+    </table>
+
+</center>
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body><center>
+
+    <form method="post">
+      {% csrf_token %}
+
+      <tr class="item">
+        <td>
+          Room Charge (Per Day)
+        </td>
+
+        <td>
+          <input type="number" name="roomCharge" placeholder="In Rupees" value="">
+        </td><br>
+      </tr>
+
+      <tr class="item">
+        <td>
+          Doctor Fee
+        </td>
+
+        <td>
+          <input type="number" name="doctorFee" placeholder="In Rupees" value="">
+        </td><br>
+      </tr>
+
+      <tr class="item">
+        <td>
+          Medicine Cost
+        </td>
+
+        <td>
+          <input type="number" name="medicineCost" placeholder="In Rupees" value="">
+        </td><br>
+      </tr>
+
+      <tr class="item last">
+        <td>
+          Other Charge
+        </td>
+
+        <td>
+          <input type="number" name="OtherCharge" placeholder="In Rupees" value="">
+        </td><br>
+      </tr>
+
+      <tr class="total">
+        <td></td>
+
+        <td>
+          <input type="submit" name="submit" value="Generate Bill">
+        </td><br>
+      </tr>
+
+    </form>
+</center>
+</body>
+
+</html>
+{% endblock content %}
+
+
+
+
+
+
+
+
+              Admit Date: {{admitDate}}<br>
+              Release Date: {{todayDate}}<br>
+              Days Spent: {{day}}
+
+
+
+              Patient Name : {{name}}<br>
+              Patient Mobile : {{mobile}}<br>
+              Patient Addres : {{address}}<br>
+
+
+
+  Doctor Name :<br>
+              {{assignedDoctorName}}<br>
+
+deacese symptoms:
+ {{symptoms}}
+
+
+
+
+
+    <tr class="heading">
+      <td>
+        Item
+      </td>
+
+      <td>
+        Price
+      </td>
+    </tr>
+    <form method="post">
+      {% csrf_token %}
+
+      <tr class="item">
+        <td>
+          Room Charge (Per Day)
+        </td>
+
+        <td>
+          <input type="number" name="roomCharge" placeholder="In Rupees" value="">
+        </td>
+      </tr>
+
+      <tr class="item">
+        <td>
+          Doctor Fee
+        </td>
+
+        <td>
+          <input type="number" name="doctorFee" placeholder="In Rupees" value="">
+        </td>
+      </tr>
+
+      <tr class="item">
+        <td>
+          Medicine Cost
+        </td>
+
+        <td>
+          <input type="number" name="medicineCost" placeholder="In Rupees" value="">
+        </td>
+      </tr>
+
+      <tr class="item last">
+        <td>
+          Other Charge
+        </td>
+
+        <td>
+          <input type="number" name="OtherCharge" placeholder="In Rupees" value="">
+        </td>
+      </tr>
+
+      <tr clas s="total">
+        <td></td>
+
+        <td>
+          <input type="submit" name="submit" value="Generate Bill">
+        </td>
+      </tr>
+
+    </form>
+  </table>
+</div>
+
+
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+<center>
+<body>
+    <br>
+  <br>
+  <br><br>
+
+    <tr class="heading">
+      <td>
+        Item
+      </td>
+
+      <td>
+        Price
+      </td>
+    </tr>
+    <form method="post">
+      {% csrf_token %}
+
+      <tr class="item">
+        <td>
+          Room Charge (Per Day)
+        </td>
+
+        <td>
+          <input type="number" name="roomCharge" placeholder="In Rupees" value="">
+        </td>
+      </tr>
+
+      <tr class="item">
+        <td>
+          Doctor Fee
+        </td>
+
+        <td>
+          <input type="number" name="doctorFee" placeholder="In Rupees" value="">
+        </td>
+      </tr>
+
+      <tr class="item">
+        <td>
+          Medicine Cost
+        </td>
+
+        <td>
+          <input type="number" name="medicineCost" placeholder="In Rupees" value="">
+        </td>
+      </tr>
+
+      <tr class="item last">
+        <td>
+          Other Charge
+        </td>
+
+        <td>
+          <input type="number" name="OtherCharge" placeholder="In Rupees" value="">
+        </td>
+      </tr>
+
+      <tr clas s="total">
+        <td></td>
+
+        <td>
+          <input type="submit" name="submit" value="Generate Bill">
+        </td>
+      </tr>
+
+    </form>
+  </table>
+</div>
+
+</center>
+  <br><br><br>
+
+</html>

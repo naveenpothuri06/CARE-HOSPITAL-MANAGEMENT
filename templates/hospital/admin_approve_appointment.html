@@ -1,0 +1,88 @@
+
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+{%load static%}
+
+
+
+<html>
+<head>
+<style>
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<center>
+    <div class="panel-heading">
+      <h1 class="panel-title">PATIENT WANTS TO ADMIT</h1>
+    </div>
+
+<table>          <thead>
+        <tr>
+          <th>Doctor Name</th>
+          <th>Patient Name</th>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Approve</th>
+          <th>Reject</th>
+        </tr>
+      </thead>
+      {% for a in appointments %}
+      <tr>
+        <td> {{a.doctorName}}</td>
+        <td>{{a.patientName}}</td>
+        <td>{{a.description}}</td>
+        <td>{{a.appointmentDate}}</td>
+           <td><a  href="{% url 'approve-appointment' a.id  %}" input type="button"  role="button" class="button" value="Input Button">APPROVE</a>
+       </td>
+        <td><a  href="{% url 'reject-appointment' a.id  %}" input type="button"  role="button" class="button" value="Input Button">REJECT</a></td>
+      </tr>
+      {% endfor %}
+
+    </table>
+
+</center>
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body><center>
+{% endblock content %}

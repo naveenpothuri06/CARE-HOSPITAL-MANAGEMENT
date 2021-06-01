@@ -1,0 +1,72 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+<head>
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bgimg.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+
+    .alert {
+      margin: 0px;
+    }
+
+
+
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+  </style>
+</head>
+    <body bgcolor="#e0ffff">
+<br>
+<br>
+
+
+  <br>
+<marquee width="100%" direction="left" height="90%">
+     <h1 style="color:blue;">welcome to CARE HOSPITAL WEBSITE</h1>
+</marquee>
+
+  <br><br><br><br><br>
+  <p>
+<center>
+  <h3>Emergency ?</h3>
+
+  <p class="lead">
+  <a href="/patientclick" input type="button"  role="button" class="button" value="Input Button">Take Appointment</a>
+
+  </p>
+    </body>
+    </center>
+  <br><br>
+
+
+<br><br><br><br>
+<br><br><br>
+{% endblock content %}

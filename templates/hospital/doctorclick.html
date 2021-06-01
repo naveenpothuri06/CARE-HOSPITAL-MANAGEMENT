@@ -1,0 +1,35 @@
+
+
+
+
+
+{% extends 'hospital/homebase.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<style>
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+  <p class="lead"><center>
+    <h1>DOCTOR register or login here.</h1><br>
+      <a  href="/doctorlogin" input type="button"  role="button" class="button" value="Input Button">LOGIN</a>
+    <a  href="/doctorsignup" input type="button"  role="button" class="button" value="Input Button">SIGNIN</a>
+</center>
+  </p>
+</div>
+
+{% endblock content %}

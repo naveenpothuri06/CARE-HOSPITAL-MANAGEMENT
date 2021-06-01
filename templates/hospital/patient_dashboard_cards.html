@@ -1,0 +1,69 @@
+
+    {% load static %}
+<html>
+<head>
+<style>
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<center>
+    <div class="panel-heading">
+      <h1 class="panel-title"> YOUR DETAILS</h1>
+    </div>
+
+<table><thead>
+        <tr>
+          <th>doctor address</th>
+          <th>Symptoms</th>
+          <th>doctorMobile</th>
+          <th>doctorname</th>
+            <th>doctordepartment</th>
+          <th>admitdate</th>
+
+        </tr>
+      </thead>
+      <tr>
+        <td> {{doctorAddress}}</td>
+        <td>{{symptoms}}</td>
+        <td>{{doctorMobile}}</td>
+
+           <td> {{userfirstname}}</td>
+        <td>{{doctorDepartment}}</td>
+        <td>{{admitDate}}</td>
+
+      </tr>
+   </table>
+
+</center>
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body bgcolor="aqua">
+</body><center>

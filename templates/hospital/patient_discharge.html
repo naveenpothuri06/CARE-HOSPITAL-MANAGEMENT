@@ -1,0 +1,105 @@
+{% extends 'hospital/patient_base.html' %}
+{% block content %}
+{%load static%}
+
+
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+
+
+{%if is_discharged%}
+
+<body>
+
+
+<center>
+    <div class="panel-heading">
+      <h1 class="panel-title">FINAL BILL</h1>
+    </div>
+
+<table><thead>
+        <tr>
+          <th>Admit Date</th>
+
+          <th> Release Date</th>
+          <th>Days Spent</th>
+          <th>Patient Name </th>
+          <th>Patient Mobile</th>
+             <th> Patient Address</th>
+          <th>Doctor Name</th>
+          <th>Deases symptoms </th>
+
+
+
+              <th> Room Charge of {{day}} Days:</th>
+             <th> Doctor Fee</th>
+          <th>Medicine Cost:</th>
+
+            <th>Other Charge: </th>
+            <th>Total Rupees : </th>
+                 </tr>
+      </thead>
+
+      <tr>
+        <td>{{admitDate}}</td>
+        <td>{{todayDate}}</td>
+        <td>{{day}}</td>
+        <td>{{name}}</td>
+        <td>{{mobile}}</td>
+          <td>{{address}}</td>
+        <td>{{assignedDoctorName}}</td>
+        <td>{{symptoms}}</td>
+
+          <td>{{roomCharge}}</td>
+        <td>{{doctorFee}}</td>
+        <td>{{medicineCost}}</td>
+<td>{{OtherCharge}}</td>
+        <td>{{total}}
+</td>
+
+
+
+      </tr>
+
+
+    </table>
+
+</center>
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+{%else%}
+<h5 style="text-align:center;">You Are Not Discharged By Hospital !</h5>
+<h5 style="text-align:center;">Your Treatment Is Going On !</h5><br><br>
+<h6 style="text-align:center;">When You Will Be Discahrged. You Can Download Invoice.</h6>
+{%endif%}
+
+{% endblock %}

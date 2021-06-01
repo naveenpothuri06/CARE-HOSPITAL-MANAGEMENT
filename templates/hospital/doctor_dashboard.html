@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html>
+
+</html>
+
+{% load static %}
+{%include 'hospital/doctor_base.html'%}
+
+<center>
+<h2>welcome to doctor page:</h2>
+</center>
+{%include 'hospital/doctor_dashboard_cards.html'%}
+<br><br><br><br>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  color: black;
+}
+
+h1 {
+  color: green;
+}
+.row {
+  display: flex;
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+
+}
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="column">
+   <div class="panel-heading" style="text-align:center;">
+        <h1 class="panel-title">Recent Appointments For You</h1>
+      </div> <table><thead>
+          <tr>
+            <th>Patient Name</th>
+
+            <th>Description</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        {% for a,p in appointments %}
+        <tr>
+          <td>{{a.patientName}}</td>
+          <td>{{a.description}}</td>
+          <td>{{p.mobile}}</td>
+          <td>{{p.address}}</td>
+          <td>{{a.appointmentDate}}</td>
+        </tr>
+        {% endfor %}
+
+      </table>
+  </div>
+</body>
+</html>
+
+

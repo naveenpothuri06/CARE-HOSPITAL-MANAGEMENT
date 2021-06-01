@@ -1,0 +1,47 @@
+
+
+
+
+
+
+
+
+
+
+{% extends 'hospital/admin_base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<style>
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+  <p class="lead">
+      <center>
+    <h1></h1><br>
+    <body>
+ <a  href="/admin-view-appointment" input type="button"  role="button" class="button" value="Input Button">VIEW APPOINTMENTS</a><br><br><br>
+
+    <a  href="/admin-add-appointment" input type="button"  role="button" class="button" value="Input Button">BOOK APPOINTMENT</a><br><br><br>
+<a  href="/admin-approve-appointment" input type="button"  role="button" class="button" value="Input Button">APPROVE APPOINTMENT </a><br><br><br>
+
+    </body>
+
+    </center>
+  </p>
+</div>
+
+{% endblock content %}

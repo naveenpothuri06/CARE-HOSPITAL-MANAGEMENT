@@ -1,0 +1,57 @@
+{% extends 'hospital/admin_base.html' %}
+{% block content %}
+{%load static%}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<center>
+    <div class="panel-heading">
+      <h1 class="panel-title">Patients</h1>
+    </div>
+
+<table><thead>
+        <tr>
+          <th>Doctor Name</th>
+          <th>Patient Name</th>
+          <th>Description</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      {% for a in appointments %}
+      <tr>
+        <td> {{a.doctorName}}</td>
+        <td>{{a.patientName}}</td>
+        <td>{{a.description}}</td>
+        <td>{{a.appointmentDate}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+</center>
+
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,41 @@
+{% extends 'hospital/admin_base.html' %}
+
+{% block content %}
+    <center>
+<br><br>
+<!------ update page for doctor by admin(sumit)  ---------->
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+          <h1><p>Update Doctor Details</p></h1>
+      </div>
+      <div class="form-content">
+        <div class="row">
+              <div class="form-group">
+                firstname :<input type="text" name="firstname" placeholder="firstname" maxlength='22'><br>
+           </div>
+              <div class="form-group">
+                  username :<input type="text" name="username" placeholder="username" maxlength='22'><br>
+           </div>
+
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                lastname :<input type="text" name="lastname" placeholder="lastname" maxlength='22'><br>
+               </div>
+              <div class="form-group">
+                password :<input type="password" name="password" placeholder="password" maxlength='22'><br>
+                </div>
+
+            {{ doctorForm.as_p }}
+        </div>
+
+        <button type="submit" class="btnSubmit">Update</button>
+      </div>
+    </div>
+  </div>
+</form>
+    </center>
+{% endblock content %}

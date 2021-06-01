@@ -1,0 +1,25 @@
+{% extends 'hospital/patient_base.html' %}
+
+{% block content %}
+<center>
+<br><br>
+<body>
+<form method="post">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+          <h1><p>Book Appointment Details</p></h1>
+      </div>
+        {{ appointmentForm.as_p }}
+
+        <button type="submit" class="btnSubmit">Book</button>
+      </div>
+    </div>
+
+</form>
+</center>
+
+
+
+{% endblock content %}

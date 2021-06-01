@@ -1,0 +1,36 @@
+{% extends 'hospital/doctor_base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<style>
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+  <p class="lead">
+      <center>
+    <h1></h1><br>
+    <body>
+ <a  href="/doctor-view-patient" input type="button"  role="button" class="button" value="Input Button">TOUR PATIENT RECORD</a><br><br><br>
+
+    <a  href="/doctor-view-discharge-patient" input type="button"  role="button" class="button" value="Input Button">YOUR DISCHARGED PATIENTS </a><br><br><br>
+
+    </body>
+
+    </center>
+  </p>
+</div>
+
+{% endblock content %}

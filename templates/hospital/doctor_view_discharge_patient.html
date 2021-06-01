@@ -1,0 +1,74 @@
+{% extends 'hospital/doctor_base.html' %}
+{% block content %}
+{%load static%}
+
+
+
+<html>
+<head>
+<style>
+
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+<center>
+    <div class="panel-heading">
+      <h1 class="panel-title"> PATIENT DISCHARGED RECORD</h1>
+    </div>
+
+<table><thead>
+        <tr>
+          <th>Name</th>
+
+          <th>Admit Date</th>
+          <th>Release Date</th>
+          <th>Symptoms</th>
+          <th>Mobile</th>
+          <th>Address</th>
+
+        </tr>
+      </thead>
+      {% for p in dischargedpatients %}
+      <tr>
+        <td> {{p.patientName}}</td>
+        <td>{{p.admitDate}}</td>
+        <td>{{p.releaseDate}}</td>
+        <td>{{p.symptoms}}</td>
+        <td>{{p.mobile}}</td>
+        <td>{{p.address}}</td>
+      </tr>
+      {% endfor %}
+   </table>
+
+</center>
+
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body><center>
+{% endblock content %}

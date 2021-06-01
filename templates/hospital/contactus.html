@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<center>
+<body>
+
+  {% include "hospital/navbar.html" %}
+  <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+  <h1><p>CONTACT US</p></h1><br>
+    <form method="POST" >
+        {% csrf_token %}
+      <div class="form-group">
+
+
+
+               user name:<input type="text" name="username" placeholder="username" maxlength='22'><br>
+                </div><br>
+        <div class="form-group">
+
+
+
+               email:<input type="email" name="email" placeholder="email" maxlength='22'><br>
+                </div><br>
+        <div class="form-group">
+           Message: <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+
+        </div><br>
+
+        <br>
+          <button onclick="myFunction()">submit</button>
+
+<script>
+function myFunction() {
+  alert("Your message sent successfully !" +
+      "We will respond to your feedback soon");
+}
+</script>
+      </div>
+    </form>
+  </center>
+</body>
+</center>
+
+</html>
